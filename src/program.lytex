@@ -1,0 +1,1090 @@
+\documentclass[letterpaper,12pt]{article}
+\usepackage{CJKutf8}
+\usepackage{bbding}
+\usepackage{color}
+\usepackage{fullpage}
+\usepackage[utf8]{inputenc}
+\usepackage{parcolumns}
+\usepackage{parskip}
+\usepackage{titlesec}
+\usepackage{url}
+\usepackage{verse}
+
+% Center section headings, and suppress numbering of section and
+% subsection headings
+\titleformat{\section}{\centering\bfseries\LARGE}{}{0pt}{}
+\titleformat{\subsection}{\bfseries\large}{}{0pt}{}
+
+% Suppress hanging indentation of overflowing verse lines
+\setlength{\vindent}{\vgap}
+
+% Rubrics
+\newcommand{\sectionnote}[1]{\hfill\textmd{\footnotesize #1}}
+\newcommand{\rubric}[1]{\textcolor{red}{#1}}
+\newcommand{\instruct}[1]{%
+  \begin{samepage}\rubric{\textit{#1}}\end{samepage}}
+\newcommand{\cross}{\rubric{\small\CrossMaltese}}
+\newcommand{\response}{\rubric{\textbf{R.}}}
+\newcommand{\person}[1]{\small\textsc{#1}}
+\newcommand{\people}{\person{People}}
+\newcommand{\priest}{\person{Priest}}
+\newcommand{\ministers}{\person{Ministers}}
+\newcommand{\bride}{\person{Bride}}
+\newcommand{\bridegroom}{\person{Bridegroom}}
+\newcommand{\lector}{\person{Lector}}
+\newcommand{\cantor}{\person{Cantor}}
+\newcommand{\spoken}[2]{%
+  \begin{samepage}\rubric{#1}\nopagebreak\begin{verse}#2\end{verse}\end{samepage}}
+
+% Environments for translations
+\renewcommand{\CJKglue}{} % Suppress line break within word
+\newcommand{\Korean}[1]{\begin{CJK}{UTF8}{}\CJKfamily{mj}{#1}\end{CJK}}
+\newcommand{\translateKorean}[1]{%
+  \spoken{\small\Korean{한국어}}{\Korean{#1}}}
+\newcommand{\translateEnglish}[1]{\spoken{\small English}{#1}}
+
+\begin{document}
+
+  \begin{titlepage}
+    \begin{center}
+
+      \null\vfill % fill top of page
+
+      \rule{\textwidth}{0.4pt}
+      \bigskip
+
+      {\LARGE Nuptial Mass}\\
+      \bigskip
+      {\large for the Sacramental Marriage of}\\
+      \bigskip
+      {\Huge\textsc{Hana Lee and Steve Kim}}
+
+      \bigskip
+      \rule{\textwidth}{0.4pt}
+
+      \vspace{0.2\textheight} % large space
+
+      2014 May 10\\
+      Holy Name Cathedral\\
+      Archdiocese of Chicago\\
+
+      \vspace{0.2\textheight} % large space
+
+      \begin{parcolumns}{1}
+        \colchunk[1]{\textsc{The Reverend John Boivin}\\ Celebrant}
+      \end{parcolumns}
+
+      \bigskip
+
+      \begin{parcolumns}[distance=0pt]{3}
+        \colchunk[1]{\textsc{Robert Michael Collins}\\ Lector}
+        \colchunk[2]{\textsc{John Manley~{\uppercase\expandafter{\romannumeral 2}}}\\ Lector}
+        \colchunk[3]{\textsc{Youran Kim}\\ Lector}
+      \end{parcolumns}
+
+      \bigskip
+
+      \begin{parcolumns}[distance=0pt]{5}
+        \colchunk[2]{\textsc{Peter Djeu}\\ Usher}
+        \colchunk[4]{\textsc{Hattie Lee}\\ Usher}
+       \end{parcolumns}
+
+    \end{center}
+  \end{titlepage}
+
+  \null
+  \vfill
+  {\footnotesize
+  Excerpts from the Lectionary for Mass for Use in the Dioceses of the
+  United States of America, second typical edition \copyright{} 2001,
+  1998, 1997, 1986, 1970 Confraternity of Christian Doctrine, Inc.,
+  Washington, DC. Used with permission. All rights reserved. No portion
+  of this text may be reproduced by any means without permission in
+  writing from the copyright owner.
+
+  Music copyrights held by G.I.A. Publications, Chicago, IL. Reprinted
+  with permission under License \#A-712817 of OneLicense.net. All rights
+  reserved.
+
+  This document was generated using \LaTeX{} and LilyPond. Source code
+  is available at \url{http://github.com/chairmanK/hnlsmk}.}
+  \thispagestyle{empty}
+  \newpage
+
+  \clearpage
+  \setcounter{page}{1}
+
+  \section{Introductory Rites}
+
+    \subsection{Entrance \sectionnote{Mozart, Le nozze di Figaro,
+    K.\,492, Act\,3 finale}}
+
+      \instruct{The \people{} stand while the \ministers{}, \priest{},
+      \bride{} and \bridegroom{} approach the altar.}
+
+    \subsection{Greeting}
+
+      \instruct{The \priest{} and \people{} sign themselves with the
+      Sign of the Cross.}
+
+      \spoken{\priest{}}{In the name of the Father, and of the Son, and
+      of the Holy Spirit.}
+
+      \spoken{\people{}}{Amen.}
+
+      \spoken{\priest{}}{The grace of our Lord Jesus Christ, and the
+      love of God, and the communion of the Holy Spirit be with you
+      all.}
+
+      \spoken{\people{}}{And with your spirit.}
+
+    \subsection{Gloria}
+
+      \begin{samepage}
+        \instruct{All sing the \emph{Gloria in excelsis} hymn}
+
+        \begin{lilypond}
+          \score {
+            \header {
+              opus = \markup { \small{John Lee, Congregational Mass} }
+            }
+            \new Staff {
+              \relative c' {
+                \key bes \major
+                \set Score.timing = ##f
+                {\hide Staff.Stem}
+                f4 g4 bes4 bes4 bes4 bes4 a4( f4) g2 \bar "|"
+                g4 g4 g4 g4 g4 g4 f4 d4 ees4 f2 \bar "||"
+                f4 g4( bes4) bes4 bes4 a4( f4) g2 \bar "|"
+                g4 g4 f4( d4 ees4) f2 \bar "||"
+                f4 g4 bes bes bes bes a4 f4 g2 \bar "|"
+                g4 f4( d4) ees4 f4 f2 \bar "||"
+                f4 g4( bes4) a4 f4 g2 \bar "|"
+                g4 g4 g4 g4 f4 d4( ees4) f2 \bar "||"
+                f4 g4 bes4 bes2 \bar "'"
+                bes4 bes4 bes4 a4 f4 g2 \bar "||"
+                g4 g4 g4 g4 g2 \bar "'"
+                f4 d4 ees4 f4 f2 \bar "||"
+                f4 g4 bes4 bes4 bes4 bes4 a4 f4 g2 \bar "|"
+                g4 f4 d4 ees4 f2 \bar "||"
+                f4 g4 bes4 bes4 bes4 bes4 a4 f4 g2 \bar "|"
+                g4 f4( d4) ees4 f2 \bar "||"
+                f4 g4 bes4 bes4 bes4 bes4 bes4 bes4 bes4 bes4 a4( f4) g2 \bar "|"
+                g4 f4 d4 ees4 f2 \bar "||"
+                f4 g4 bes4 bes4 bes4 bes4 bes4 bes4 bes2 \bar "|"
+                bes4 bes4 bes4 a4 f4 g2 \bar "|"
+                g4 g4 g4 g4 g4 g4 f4 d4 ees4 f2 \bar "||"
+                f4 g4 bes4 bes4 a4( f4) g2 \bar "|"
+                g4 g4 g4 g4 g4 g4 g4 g4 g2 \bar "'"
+                f4( d4 ees4) f2 \bar "|."
+              }
+              \addlyrics {
+                Glo -- ry to God in the high -- est,
+                and on earth peace to peo -- ple of good will.
+                We praise you, we bless you,
+                we a -- dore you,
+                we glo -- ri -- fy you, we give you thanks
+                for your great glo -- ry.
+                Lord God, heav'n -- ly King,
+                O God, al -- might -- y Fa -- ther.
+                Lord Je -- sus Christ,
+                On -- ly Be -- got -- ten Son,
+                Lord God, Lamb of God,
+                Son of the Fa -- ther,
+                you take a -- way the sins of the world,
+                have mer -- cy on us;
+                you take a -- way the sins of the world,
+                re -- ceive our prayer;
+                you are seat -- ed at the right hand of the Fa -- ther,
+                have mer -- cy on us.
+                For you a -- lone are the Ho -- ly One,
+                you a -- lone are the Lord,
+                you a -- lone are the Most High, Je -- sus Christ,
+                with the Ho -- ly Spir -- it,
+                in the glo -- ry of God the Fa -- ther.
+                A -- men.
+              }
+            }
+            \layout {
+              \context {
+                \Score
+                \remove "Bar_number_engraver"
+              }
+              \context {
+                \Staff
+                \remove "Time_signature_engraver"
+              }
+            }
+          }
+        \end{lilypond}
+      \end{samepage}
+
+    \subsection{Collect}
+
+      \spoken{\priest{}}{Let us pray.}
+
+      \instruct{All pray in silence with the \priest{}.}
+
+      \spoken{\priest{}}{%
+      Be attentive to our prayers, O Lord,\\
+      and in your kindness\\
+      pour out your grace on these your servants Hana and Steve,\\
+      that, coming together before your altar,\\
+      they may be confirmed in love for one another.
+
+      Through our Lord Jesus Christ, your Son,\\
+      who lives and reigns with you in the unity of the Holy Spirit,\\
+      one God, for ever and ever.}
+
+      \spoken{\people{}}{Amen.}
+
+      \instruct{All sit.}
+
+  \section{Liturgy of the Word}
+
+    \subsection{First Reading \sectionnote{Genesis 1:26--28,31a}}
+
+      \spoken{\lector{}}{%
+      A reading from the Book of Genesis
+
+      Then God said:\\
+      ``Let us make man in our image, after our likeness.\\
+      Let them have dominion over the fish of the sea,\\
+      \vin the birds of the air, and the cattle,\\
+      \vin and over all the wild animals\\
+      \vin and all the creatures that crawl on the ground.''
+
+      God created man in his image;\\
+      \vin in the image of God he created him;\\
+      \vin male and female he created them.
+
+      God blessed them, saying:\\
+      \vin ``Be fertile and multiply;\\
+      \vin fill the earth and subdue it.\\
+      Have dominion over the fish of the sea, the birds of the air,\\
+      \vin and all the living things that move on the earth.''\\
+      God looked at everything he had made, and he found it very good.
+
+      The word of the Lord.}
+
+      \translateKorean{
+      창세기의 말씀입니다
+
+      하느님께서 말씀하셨다. ``우리와 비슷하게 우리 모습으로 사람을
+      만들자. 그래서 그가 바다의 물고기와 하늘의 새와 집짐승과 온갖
+      들짐승과 땅을 기어 다니는 온갖 것을 다스리게 하자.''
+
+      하느님께서는 이렇게 당신의 모습으로 사람을 창조하셨다. 하느님의
+      모습으로 사람을 창조하시되 남자와 여자로 그들을 창조하셨다.
+
+      하느님께서 그들에게 복을 내리며 말씀하셨다. ``자식을 많이 낳고
+      번성하여 땅을 가득 채우고 지배하여라. 그리고 바다의 물고기와
+      하늘의 새와 땅을 기어 다니는 온갖 생물을 다스려라.''
+
+      하느님께서 보시니 손수 만드신 모든 것이 참 좋았다.
+
+      주님의 말씁입니다.}
+
+      \spoken{\people{}}{Thanks be to God.}
+
+    \subsection{Responsorial Psalm \sectionnote{Psalm 33:12 and 18,20--21,22}}
+
+      \begin{samepage}
+        \instruct{The \people{} sing the response following the \cantor{}}
+
+        \begin{lilypond}
+          \score {
+            \header {
+              opus = \markup { \small{J. Robert Carroll} }
+            }
+            \new Staff {
+              \relative c' {
+                \key bes \major
+                \time 6/4
+                r2 r4 r2 ees4
+                g2 bes4 a4 bes4 c4
+                bes4 g2( g2) g4
+                c4 g2( g4) ees4 f4
+                g2.( g2) r4 \bar "|."
+              }
+              \addlyrics {
+                The
+                earth is full of the
+                good -- ness, the
+                good -- ness of the
+                Lord.
+              }
+            }
+            \layout {
+              \context {
+                \Score
+                \remove "Bar_number_engraver"
+              }
+            }
+          }
+        \end{lilypond}
+      \end{samepage}
+
+      \spoken{\cantor{}}{%
+      \response{}~The earth is full of the goodness of the Lord.
+
+      Blessed the nation whose God is the \textsc{Lord},\\
+      \vin the people{} he has chosen for his own inheritance.\\
+      But see, the eyes of the \textsc{Lord} are upon those who fear him,\\
+      \vin upon those who hope for his kindness.~\response{}
+
+      Our soul waits for the \textsc{Lord},\\
+      \vin who is our help and our shield.\\
+      For in him our hearts rejoice;\\
+      \vin in his holy name we trust.~\response{}
+
+      May your kindness, O \textsc{Lord}, be upon us\\
+      \vin who have put our hope in you.~\response{}}
+
+      \translateKorean{%
+      \response{}~주님의 자애가 땅에 가득하네.
+
+      행복하여라, 주님을 하느님으로 모시는 민족\\
+      \vin 그분께서 당신 소유로 뽑으신 백성!\\
+      보라, 주님의 눈은 당신을 경외하는 이들에게,\\
+      \vin 당신 자애를 바라는 이들에게 머무르신다.~\response{}
+
+      우리의 영혼은 주님을 기다리니\\
+      \vin 그분은 우리의 도움, 우리의 방패이시다.\\
+      그분 안에서 우리 마음이 기뻐하고\\
+      \vin 그분의 거룩하신 이름을 우리가 신뢰한다네.~\response{}
+
+      주님, 저희가 당신께 바라는 그대로\\
+      \vin 저희 위에 당신의 자애를 베푸소서.~\response{}}
+
+    \subsection{Second Reading \sectionnote{1 John 4:7--12}}
+
+      \spoken{\lector{}}{\Korean{
+      요한 1서의 말씀입니다
+
+      사랑하는 여러분, 서로 사랑합시다. 사랑은 하느님에게서 오는 것이기
+      때문입니다. 사랑하는 이는 모두 하느님에게서 태어났으며 하느님을
+      압니다.
+
+      사랑하지 않는 사람은 하느님을 알지 못합니다. 하느님은 사랑이시기
+      때문입니다.
+
+      하느님의 사랑은 우리에게 이렇게 나타났습니다. 곧 하느님께서 당신의
+      외아드님을 세상에 보내시어 우리가 그분을 통하여 살게 해
+      주셨습니다.
+
+      그 사랑은 이렇습니다. 우리가 하느님을 사랑한 것이 아니라, 그분께서
+      우리를 사랑하시어 당신의 아드님을 우리 죄를 위한 속죄 제물로 보내
+      주신 것입니다.
+
+      사랑하는 여러분, 하느님께서 우리를 이렇게 사랑하셨으니 우리도 서로
+      사랑해야 합니다.
+
+      지금까지 하느님을 본 사람은 없습니다. 그러나 우리가 서로 사랑하면,
+      하느님께서 우리 안에 머무르시고 그분 사랑이 우리에게서 완성됩니다.
+
+      주님의 말씀입니다.}}
+
+      \translateEnglish{%
+      A reading from the first Letter of Saint John
+
+      Beloved, let us love one another,\\
+      \vin because love is of God;\\
+      \vin everyone who loves is begotten by God and knows God.\\
+      Whoever is without love does not know God, for God is love.\\
+      In this way the love of God was revealed to us:\\
+      \vin God sent his only-begotten Son into the world\\
+      \vin so that we might have life through him.\\
+      In this is love:\\
+      \vin not that we have loved God, but that he loved us\\
+      \vin and sent his Son as expiation for our sins.\\
+      Beloved, if God so loved us,\\
+      \vin we must also love one another.\\
+      No one has ever seen God.\\
+      Yet, if we love one another, God remains in us,\\
+      \vin and his love is brought to perfection in us.
+
+      The word of the Lord.}
+
+      \spoken{\people{}}{Thanks be to God.}
+
+    \subsection{Gospel Acclamation}
+
+      \instruct{All stand and sing the \emph{Alleluia} chant.}
+
+      \spoken{\cantor{}}{%
+      God is love.\\
+      If God loved us, we also must love one another.}
+
+    \subsection{Reading from the Gospel \sectionnote{John 2:1--11}}
+
+      \spoken{\priest{}}{The Lord be with you.}
+
+      \spoken{\people{}}{And with your spirit.}
+
+      \spoken{\priest{}}{A reading from the holy Gospel according to
+      John.}
+
+      \spoken{\people{}}{Glory to you, O Lord.}
+
+      \spoken{\priest{}}{%
+      There was a wedding in Cana in Galilee,\\
+      \vin and the mother of Jesus was there.\\
+      Jesus and his disciples were also invited to the wedding.\\
+      When the wine ran short,\\
+      \vin the mother of Jesus said to him,\\
+      \vin ``They have no wine.''\\
+      And Jesus said to her,\\
+      \vin ``Woman, how does your concern affect me?\\
+      My hour has not yet come.''\\
+      His mother said to the servers,\\
+      \vin ``Do whatever he tells you.''\\
+      Now there were six stone water jars there for Jewish ceremonial washings,\\
+      \vin each holding twenty to thirty gallons.\\
+      Jesus told them,\\
+      \vin ``Fill the jars with water.''\\
+      So they filled them to the brim.\\
+      Then he told them,\\
+      \vin ``Draw some out now and take it to the headwaiter.''\\
+      So they took it.\\
+      And when the headwaiter tasted the water that had become wine,\\
+      \vin without knowing where it came from\\
+      \vin (although the servants who had drawn the water knew),\\
+      \vin the headwaiter called the bridegroom and said to him,\\
+      \vin ``Everyone serves good wine first,\\
+      \vin and then when people{} have drunk freely, an inferior one;\\
+      \vin but you have kept the good wine until now.''\\
+      Jesus did this as the beginning of his signs in Cana in Galilee\\
+      \vin and so revealed his glory,\\
+      \vin and his disciples began to believe in him.
+
+      The Gospel of the Lord.}
+
+      \translateKorean{
+      사흘째 되는 날, 갈릴래아 카나에서 혼인 잔치가 있었는데, 예수님의
+      어머니도 거기에 계셨다.
+
+      예수님도 제자들과 함께 그 혼인 잔치에 초대를 받으셨다.
+
+      그런데 포도주가 떨어지자 예수님의 어머니가 예수님께 ``포도주가
+      없구나.'' 하였다.
+
+      예수님께서 어머니에게 말씀하셨다. ``여인이시여, 저에게 무엇을
+      바라십니까? 아직 저의 때가 오지 않았습니다.''
+
+      그분의 어머니는 일꾼들에게 ``무엇이든지 그가 시키는 대로 하여라.''
+      하고 말하였다.
+
+      거기에는 유다인들의 정결례에 쓰는 돌로 된 물독 여섯 개가 놓여
+      있었는데, 모두 두세 동이들이였다.
+
+      예수님께서 일꾼들에게 ``물독에 물을 채워라.'' 하고 말씀하셨다.
+      그들이 물독마다 가득 채우자, 예수님께서 그들에게 다시, ``이제는
+      그것을 퍼서 과방장에게 날라다 주어라.'' 하셨다. 그들은 곧 그것을
+      날라 갔다.
+
+      과방장은 포도주가 된 물을 맛보고 그것이 어디에서 났는지 알지
+      못하였지만, 물을 퍼 간 일꾼들은 알고 있었다. 그래서 과방장이
+      신랑을 불러 그에게 말하였다. ``누구든지 먼저 좋은 포도주를 내놓고,
+      손님들이 취하면 그보다 못한 것을 내놓는데, 지금까지 좋은 포도주를
+      남겨 두셨군요.''
+
+      이렇게 예수님께서는 처음으로 갈릴래아 카나에서 표징을 일으키시어,
+      당신의 영광을 드러내셨다. 그리하여 제자들은 예수님을 믿게 되었다.
+
+      주님의 말씀입니다.}
+
+      \spoken{\people{}}{Praise to you, Lord Jesus Christ.}
+
+    \subsection{Homily}
+
+      \instruct{After the proclamation of the Gospel, the \people{} sit
+      and listen to the homily given by the \priest{}.}
+
+  \section{Rite of Marriage}
+
+    \subsection{Introduction and Questions of Intent}
+
+      \instruct{All stand. The \bride{} and \bridegroom{} declare their
+      intention to enter into marriage.}
+
+    \subsection{Consent}
+
+      \instruct{The \bride{} and \bridegroom{} administer the Sacrament
+      of Marriage to each other by their exchange of consent. On behalf
+      of the Church and the people of God, the \priest{} receives the
+      consent of the couple.}
+
+    \subsection{Blessing and Exchange of Rings}
+
+      \spoken{\priest{}}{%
+      May the Lord bless \cross{} these rings\\
+      which you give to each other\\
+      as the sign of your love and fidelity.}
+
+      \spoken{\people{}}{Amen.}
+
+    \subsection{Universal Prayer}
+
+      \spoken{\instruct{The \priest{} calls upon the faithful to
+      participate in the universal prayer. To each intention announced
+      by the \lector{}, the \people{} reply in supplication}}{%
+      \response{}~Lord, hear our prayer.}
+
+      \spoken{\lector{}}{%
+      For the Church and its leaders. May our commitment to the Gospel
+      lead us to deepen our faith and trust in God.~\response{}
+
+      For our world and its leaders. May all people be treated with the
+      dignity they deserve as God's children.~\response{}
+
+      For our country and those who defend it. May our men and women who
+      serve in the military be kept safe from all harm.~\response{}
+
+      For those who are sick, lonely, or depressed. May they be
+      strengthened by God's love and aided by friends and
+      family.~\response{}
+
+      For all of our guests gathered here with us today. May they enjoy
+      the warm company of family and friends and have safe travel on
+      their journey home.~\response{}
+
+      For Hana and Steve. May they live long, blessed lives together,
+      may their love grow stronger each and every day, and may they
+      build a family rooted in faith and unconditional love.~\response{}
+
+      For all those who have died, especially the relatives and friends
+      of Hana and Steve, and of all present for this wedding. May they
+      enjoy perfect happiness and total fulfillment in eternal
+      life.~\response{}}
+
+      \spoken{The \priest{} concludes the petitions with a prayer, to
+      which the \people{} respond}{Amen.}
+
+      \instruct{The \people{} sit.}
+
+  \section{Liturgy of the Eucharist}
+
+    \subsection{Preparation of the Gifts \sectionnote{H{\"a}ndel, Organ
+    Concerto Op.\,4 No.\,4, HWV\,292, Movt.\,2}}
+
+      \instruct{The altar is made ready. The \bride{} and \bridegroom{}
+      bring forward bread and wine. The \priest{} places the bread and
+      wine on the altar and performs rites of purification.}
+
+    \subsection{Prayer over the Offerings}
+
+      \spoken{\priest{}}{%
+      Pray, brothers and sisters,\\
+      that my sacrifice and yours\\
+      may be acceptable to God,\\
+      the almighty Father.}
+
+      \spoken{\instruct{The \people{} rise and reply}}{%
+      May the Lord accept the sacrifice at your hands\\
+      for the praise and glory of his name\\
+      for our good\\
+      and the good of all his holy Church.}
+
+      \spoken{\priest{}}{%
+      Receive, we pray, O Lord,\\
+      the offering made on the occasion\\
+      of this sealing of the sacred bond of Marriage,\\
+      and, just as your goodness is its origin,\\
+      may your providence guide its course.\\
+      Through Christ our Lord.}
+
+      \spoken{\people{}}{Amen.}
+
+    \subsection{Eucharistic Prayer}
+
+      \spoken{\priest{}}{The Lord be with you.}
+
+      \spoken{\people{}}{And with your spirit.}
+
+      \spoken{\priest{}}{Lift up your hearts.}
+
+      \spoken{\people{}}{We lift them up to the Lord.}
+
+      \spoken{\priest{}}{Let us give thanks to the Lord our God.}
+
+      \spoken{\people{}}{It is right and just.}
+
+      \spoken{\priest{}}{%
+      It is truly right and just, our duty and our salvation,\\
+      always and everywhere to give you thanks,\\
+      Lord, holy Father, almighty and eternal God.
+
+      For you willed that the human race,\\
+      created by the gift of your goodness,\\
+      should be raised to such high dignity\\
+      that in the union of husband and wife\\
+      you might bestow a true image of your love.
+
+      For those you created out of charity\\
+      you call to the law of charity without ceasing\\
+      and grant them a share in your eternal charity.
+
+      And so, the Sacrament of Holy Matrimony,\\
+      as the abiding sign of your own love,\\
+      consecrates the love of man and woman,\\
+      through Christ our Lord.
+
+      Through him, with the Angels and all the Saints,\\
+      we sing the hymn of your praise,\\
+      as without end we acclaim:}
+
+      \begin{samepage}
+        \instruct{All sing the \emph{Sanctus} acclamation}
+
+        \begin{lilypond}
+          \score {
+            \header {
+              opus = \markup { \small{Richard Proulx, Community Mass} }
+            }
+            \new Staff {
+              \relative c'' {
+                \key f \major
+                \time 4/4
+                a4 g4 bes4 a4
+                g4.( a8) f2
+                f4 a2 g4
+                f2. r4
+                a4( g4 bes4) a4
+                g4.( a8 f4) f4
+                bes4.( a8) g4 f4
+                c'4 c2 c4
+                d4. d8 a4 b4
+                c4 c2 f,4
+                a4 g4 f4 e4
+                f4 f2 r4
+                a4 g4 bes4 a4
+                g4.( a8) f4 f4
+                bes4.( a8) g4 f4
+                c'2. c4
+                d4. d8 a4 b4
+                c4 c2 f,4
+                a4 g4 f4 e4
+                f4 f2.(
+                f2. f8) r8 \bar "|."
+              }
+              \addlyrics {
+                Ho -- ly, Ho -- ly
+                Ho -- ly
+                Lord God of
+                hosts.
+                Heav'n and
+                earth are
+                full of your
+                glo -- ry. Ho --
+                san -- na in the
+                high -- est, ho --
+                san -- na in the
+                high -- est.
+                Blessed is he who
+                comes in the
+                name of the
+                Lord. Ho --
+                san -- na in the
+                high -- est, ho
+                san -- na in the
+                high -- est.
+              }
+            }
+            \layout {
+              \context {
+                \Score
+                \remove "Bar_number_engraver"
+              }
+            }
+          }
+        \end{lilypond}
+      \end{samepage}
+
+      \spoken{\instruct{After the \emph{Sanctus}, the \people{} kneel.
+      The \priest{} continues with the \emph{epiclesis}, the
+      \emph{institution narrative} and the \emph{consecration}. At the
+      end of the \emph{consecration}, the \priest{} says}}{%
+      The mystery of faith.}
+
+      \begin{samepage}
+        \instruct{And the \people{} continue with the \emph{memorial
+        acclamation}}
+
+        \begin{lilypond}
+          \score {
+            \header {
+              opus = \markup { \small{Richard Proulx, Community Mass} }
+            }
+            \new Staff {
+              \relative c'' {
+                \key f \major
+                \time 4/4
+                a4 g4 bes4 a4
+                g4.( a8 f4) f4
+                bes4.( a8 g4) f4
+                c'2. c8 c8
+                d4. d8 a4 b4
+                c2. f,4
+                a4 g4 f4 e4
+                f1(
+                f2. f8) r8 \bar "|."
+              }
+              \addlyrics {
+                When we eat this
+                Bread and
+                drink this
+                Cup, we pro --
+                claim your Death, O
+                Lord un --
+                til you come a --
+                gain.
+              }
+            }
+            \layout {
+              \context {
+                \Score
+                \remove "Bar_number_engraver"
+              }
+            }
+          }
+        \end{lilypond}
+      \end{samepage}
+
+      \spoken{\instruct{The \priest{} then offers the \emph{oblation},
+      the \emph{intercessions}, and the \emph{concluding doxology}}}{%
+      Through him, and with him, and in him,\\
+      O God, almighty Father,\\
+      in the unity of the Holy Spirit,\\
+      all glory and honor is yours,\\
+      for ever and ever.}
+
+      \begin{samepage}
+        \instruct{Which the \people{} affirm and conclude}
+
+        \begin{lilypond}
+          \score {
+            \new Staff {
+              \relative c'' {
+                \key g \major
+                \time 4/4
+                b2 a2
+                g2 fis2
+                e4( a4 g4 fis4)
+                g1 \bar "|."
+              }
+              \addlyrics {
+                A -- men,
+                a -- men,
+                a --
+                men.
+              }
+            }
+            \layout {
+              \context {
+                \Score
+                \remove "Bar_number_engraver"
+              }
+            }
+          }
+        \end{lilypond}
+      \end{samepage}
+
+    \subsection{The Lord's Prayer}
+
+      \instruct{All stand.}
+
+      \spoken{\priest{}}{%
+      At the Savior’s command\\
+      and formed by divine teaching,\\
+      we dare to say:}
+
+      \spoken{\instruct{All pray together}}{
+      Our Father who art in heaven,\\
+      hallowed be thy name.\\
+      Thy kingdom come.\\
+      Thy will be done on earth, as it is in heaven.\\
+      Give us this day our daily bread,\\
+      and forgive us our trespasses,\\
+      as we forgive those who trespass against us,\\
+      and lead us not into temptation,\\
+      but deliver us from evil.}
+
+    \subsection{Nuptial Blessing}
+
+      \spoken{\priest{}}{%
+      Let us humbly invoke by our prayers, dear brothers and sisters,\\
+      God's blessing upon this bride and groom,\\
+      that in his kindness he may favor with his help\\
+      those on whom he has bestowed the Sacrament of Matrimony.}
+
+      \instruct{All pray in silence for a while.}
+
+      \spoken{\priest{}}{%
+      Holy Father, maker of the whole world,\\
+      who created man and woman in your own image\\
+      and willed that their union be crowned with your blessing,\\
+      we humbly beseech you for these your servants,\\
+      who are joined today in the Sacrament of Matrimony.
+
+      May your abundant blessing, Lord,\\
+      come down upon this bride, Hana,\\
+      and upon Steve, her companion for life,\\
+      and may the power of your Holy Spirit\\
+      set their hearts aflame from on high,\\
+      so that, living out together the gift of Matrimony,\\
+      they may adorn their family with children\\
+      and enrich the Church.
+
+      In happiness may they praise you, O Lord,\\
+      in sorrow may they seek you out;\\
+      may they have the joy of your presence\\
+      to assist them in their toil,\\
+      and know that you are near\\
+      to comfort them in their need;\\
+      let them pray to you in the holy assembly\\
+      and bear witness to you in the world,\\
+      and after a happy old age,\\
+      together with the circle of friends that surrounds them,\\
+      may they come into the Kingdom of Heaven.\\
+      Through Christ our Lord.}
+
+      \spoken{\people{}}{Amen.}
+
+    \subsection{Rite of Peace}
+
+      \spoken{\priest{}}{The peace of the Lord be with you always.}
+
+      \spoken{\people{}}{And with your spirit.}
+
+      \spoken{\priest{}}{Let us offer each other a sign of peace.}
+
+      \spoken{\instruct{All are invited to exchange a sign of peace with
+      one another, with the customary words}}{Peace be with you.}
+
+    \subsection{Fraction of the Bread}
+
+      \begin{lilypond}
+        \score {
+          \new Staff {
+            \relative c'' {
+              \key c \major
+              \set Score.timing = ##f
+              {\hide Staff.Stem}
+              g4 g4 g4( a4) a2 \bar "'"
+              a4 a4 a4 g4 a4 f4 g4 a2 \bar "'"
+              g4 a4 b4 g4 a4( g4) g2 \bar "||"
+              g4 g4 g4( a4) a2 \bar "'"
+              a4 a4 a4 g4 a4 f4 g4 a2 \bar "'"
+              g4 a4 b4 g4 a4( g4) g2 \bar "||"
+              g4 g4 g4( a4) a2 \bar "'"
+              a4 a4 a4 g4 a4 f4 g4 a2 \bar "'"
+              g4 a4 b4 g4 a4( g4) g2 \bar "|."
+            }
+            \addlyrics {
+              A -- gnus De -- i,
+              qui tol -- lis pec -- ca -- ta -- mun -- di:
+              mi -- se -- re -- re no -- bis.
+              A -- gnus De -- i,
+              qui tol -- lis pec -- ca -- ta -- mun -- di:
+              mi -- se -- re -- re no -- bis.
+              A -- gnus De -- i,
+              qui tol -- lis pec -- ca -- ta -- mun -- di:
+              do -- na no -- bis pa -- cem.
+            }
+          }
+          \layout {
+            \context {
+              \Staff
+              \remove "Time_signature_engraver"
+            }
+            \context {
+              \Score
+              \remove "Bar_number_engraver"
+            }
+          }
+        }
+      \end{lilypond}
+
+      \instruct{All kneel after the \emph{Agnus Dei} supplication.}
+
+    \subsection{Communion}
+
+      \spoken{\priest{}}{%
+      Behold the Lamb of God, behold him who takes away the sins of the
+      world. Blessed are those called to the supper of the Lamb.}
+
+      \spoken{\people{}}{%
+      Lord, I am not worthy that you should enter under my roof, but
+      only say the word and my soul shall be healed.}
+
+      \instruct{Those who are not receiving the sacrament may remain
+      seated. Because Catholics believe that the celebration of the
+      Eucharist is a sign of the reality of the oneness of faith, life,
+      and worship, members of those churches with whom we are not yet
+      fully united are ordinarily not admitted to Holy Communion.}
+
+      \begin{samepage}
+        \instruct{During Communion, the \cantor{} sings the
+        \emph{Suscipe} prayer by Saint Ignatius of Loyola}
+
+        \begin{lilypond}
+          \score {
+            \header {
+              opus = \markup {
+                \override #'(font-name . "Batang") \small{김영자}
+              }
+            }
+            \new Staff {
+              \relative c' {
+                \key aes \major
+                \time 4/4
+                ees4. ees8 aes4 ees4
+                f4. f8 f2
+                f4. f8 ees4 aes4
+                g2. r4
+                bes4. bes8 f4 bes4
+                g4. g8 g2
+                aes4. g8 f4 g4
+                ees2. bes'8.\noBeam bes16\noBeam
+                \bar "||" \time 3/4
+                c4. c8 bes8.\noBeam bes16\noBeam
+                aes2 bes8.\noBeam bes16\noBeam
+                bes4 bes8\noBeam\( bes8\noBeam\) des4
+                bes2 c8.\noBeam c16\noBeam
+                c4. c8 bes8.\noBeam bes16\noBeam
+                aes2 bes4
+                g4. aes8 f4
+                ees2 ees8.\noBeam ees16\noBeam
+                c'4.\( bes8\) aes8\noBeam\( bes8\noBeam\)
+                c2 c4
+                des4.\( c8\) bes8\noBeam c8\noBeam
+                bes2 bes4
+                \bar "||" \time 4/4
+                aes4. g8 f4 g8( bes8)
+                ees2 des4\fermata f,4
+                ees4. aes8 g2
+                aes2. r4 \bar "|."
+              }
+              \addlyrics {
+                \override Lyrics . LyricText #'font-name = #"Batang"
+                \set stanza = #"1. "
+                주4. 여8 나4 를4
+                온4. 전8 히2
+                받4. 아8 주4 소4
+                서2.
+                주4. 여8 나4 를4
+                온4. 전8 히2
+                받4. 아8 주4 소4
+                서2. 나8. 의16
+                모4. 든8 자8. 유16
+                와2 나8. 의16
+                기4 억8 과8 지4
+                력2 나8. 의16
+                의4. 지8 소8. 유16
+                한2 이4
+                모4. 든8 것4
+                을2 주8. 여16
+                당4. —8 신8 —8
+                께2 드4
+                리4. —8 리8 이8
+                다2 이4
+                모4. 든8 것4 되4
+                돌2 려4 드4
+                리4. 오8 리2
+                다2. r4
+              }
+              \addlyrics {
+                \override Lyrics . LyricText #'font-name = #"Batang"
+                \set stanza = #"2. "
+                주4. 여8 나4 를4
+                온4. 전8 히2
+                받4. 아8 주4 소4
+                서2.
+                주4. 여8 나4 를4
+                온4. 전8 히2
+                받4. 아8 주4 소4
+                서2. 내8. 게16
+                주4. 신8 모8. 든16
+                것2 주8. 의16
+                것4 이8 —8 오4
+                니2 오8. 직16
+                주4. 님8 뜻8. 대16
+                로2 처4
+                리4. 하8 소4
+                서2 당8. 신16
+                사4. 랑8 은8 총8
+                을2 나4
+                에4. 게8 주8 시8
+                면2 아4
+                무4. 것8 도4 더4
+                바2 람4 없4
+                으4. 오8 리2
+                다2. r4
+              }
+            }
+            \layout {
+              \context {
+                \Score
+                \remove "Bar_number_engraver"
+              }
+            }
+          }
+        \end{lilypond}
+      \end{samepage}
+
+    \subsection{Prayer after Communion}
+
+      \spoken{\priest{}}{
+      Grant, we pray, almighty God,\\
+      that the power of the Sacrament we have received\\
+      may find growth in these your servants\\
+      and that the effects of the sacrifice we have offered\\
+      may be felt by us all.
+
+      Through Christ our Lord.}
+
+      \spoken{\people{}}{Amen.}
+
+  \section{Concluding Rites}
+
+    \subsection{Solemn Blessing}
+
+      \instruct{All stand for the blessing.}
+
+      \spoken{\priest{}}{%
+      May God the all-powerful Father grant you his joy\\
+      and bless you in your children.}
+
+      \spoken{\people{}}{Amen.}
+
+      \spoken{\priest{}}{%
+      May the Only Begotten Son of God\\
+      stand by you with compassion in good times and in bad.}
+
+      \spoken{\people{}}{Amen.}
+
+      \spoken{\priest{}}{%
+      May the Holy Spirit of God\\
+      always pour forth his love into your hearts}
+
+      \spoken{\people{}}{Amen.}
+
+      \spoken{\priest{}}{%
+      And may almighty God bless all of you, who are gathered here,\\
+      the Father, and the Son, \cross{} and the Holy Spirit.}
+
+      \spoken{\people{}}{Amen.}
+
+    \subsection{Dismissal}
+
+      \spoken{\instruct{The \priest{} pronounces the formula of
+      dismissal, to which the \people{} respond}}{Thanks be to God.}
+
+    \subsection{Recessional \sectionnote{Widor, Organ Symphony No.\,5,
+    Op.\,42 No.\,1, Movt.\,5}}
+
+      \instruct{The \ministers{}, \bride{}, \bridegroom{}, and \priest{}
+      bow to the altar and process out of the cathedral.}
+
+\end{document}
