@@ -1,18 +1,20 @@
-BASENAME = program
+PROGRAM = program
+GUIDE = guide
 PDFLATEX = pdflatex
 LILYPOND = lilypond-book
 SOURCE = src
 TARGET = target
 
-all: music pdf
+all: music program guide
 
-.PHONY: music
 music: | $(TARGET)
-	$(LILYPOND) --output=$(TARGET) $(SOURCE)/$(BASENAME).lytex
+	$(LILYPOND) --output=$(TARGET) $(SOURCE)/$(PROGRAM).lytex
 
-.PHONY: pdf
-pdf: music | $(TARGET)
-	cd $(TARGET) && $(PDFLATEX) --output-format pdf $(BASENAME).tex
+program: music | $(TARGET)
+	cd $(TARGET) && $(PDFLATEX) --output-format pdf $(PROGRAM).tex
+
+guide: | $(TARGET)
+	$(PDFLATEX) --output-format pdf -output-directory $(TARGET) $(SOURCE)/$(GUIDE).tex
 
 $(TARGET):
 	mkdir $(TARGET)
